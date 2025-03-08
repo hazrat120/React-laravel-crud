@@ -55,6 +55,7 @@ function Navbar() {
                 Contact Us
               </Link>
             </li>
+
             {/* Dropdown Menu */}
             <li className="nav-item dropdown">
               <a
@@ -79,6 +80,18 @@ function Navbar() {
                   Something Else Here
                 </Link>
               </div>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">
+                Login
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/admin">
+                Admin Dashbord
+              </Link>
             </li>
           </ul>
         </div>
