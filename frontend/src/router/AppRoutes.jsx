@@ -5,7 +5,9 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Student from "../pages/Student";
 import Login from "../components/Login";
-import AdminDashbord from "../components/AdminDashboard";
+import AdminDashboard from "../components/AdminDashboard";
+import { ProtectedRoute } from "../router/ProtectedRoute";
+import Register from "../components/Register";
 
 function AppRoutes() {
   return (
@@ -15,7 +17,10 @@ function AppRoutes() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/student" element={<Student />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/admin" element={<AdminDashbord />} />
+      <Route path="/register" element={<Register />} />
+      <Route element={<ProtectedRoute />}>
+        <Route path="/admin" element={<AdminDashboard />} />
+      </Route>
     </Routes>
   );
 }
